@@ -1,0 +1,102 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title - PMS</title>
+    <style>
+        .menu a {
+            padding: 5px;
+            background-color: lightgrey;
+            color: red;
+        }
+
+        .prodbox {
+            padding: 5px;
+            margin: 5px;
+            width: 400px;
+            background-color: lightgray;
+        }
+
+        .comments .comment .picture {
+            float: left;
+        }
+
+            .comments .comment .picture img {
+                width: 30px;
+                height: 30px;
+            }
+
+        .comments .comment .name {
+            color: red;
+        }
+
+        .comments .comment .comment-text {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 12px;
+        }
+    </style>
+    <script>
+        window.BasePath = '@Url.Content("~")';
+    </script>
+
+    @Styles.Render("~/Content/css")
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/moment.js"></script>
+
+    <script src="~/Scripts/MyAppGlobal.js"></script>
+
+    @RenderSection("scripts", false)
+    <link href="@Url.Content("~/Content/loginformat.css")" rel="stylesheet" type="text/css" />
+    @RenderSection("Styles", false)
+
+</head>
+<body>
+    <div id="overlay" class="overlay">
+
+    </div>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div >
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        @if (WebPrac.Security.SessionManager.User.IsAdmin)
+                        {
+                            <li>@Html.ActionLink("Product Management System", "Admin", "Home", null, new { @class = "navbar-brand" })</li>
+                            <li><a href="/Home/Admin">Home</a></li>
+                            <li><a href="/Product/ShowAll">Show All</a></li>
+                            @*<li><a href="/Product/New">New Product</a></li>*@
+                        }
+                        else
+                        {
+                            <li>@Html.ActionLink("Product Management System", "NormalUser", "Home", null, new { @class = "navbar-brand" })</li>
+                            <li><a href="/Home/NormalUser">Home</a></li>
+                            <li><a href="/User/Edit">Edit Profile</a></li>
+                            <li><a href="/User/ChangePassword">Change Password</a></li>
+                            <li><a href="/Product/ShowAll">Show All</a></li>
+                        }
+                        <li><a href="/Product2/New">Product Ajax</a></li>
+                        <li><a href="/User/Logout">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <h1 class="col-lg-offset-1">Welcome @WebPrac.Security.SessionManager.User.Name</h1>
+    <span style="color:red">@TempData["Message"]</span>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

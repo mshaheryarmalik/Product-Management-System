@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+
+
+<table align="center" style="margin:100px 0px 0px 385px">
+    <tr>
+        <td>
+            <div style="margin:-40px 0px; position:center">
+                <h1 style="color:white; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">User Management System</h1>
+            </div>
+            <div class="login-page">
+                <div class="form">
+                    <form class="login-form" method="POST" action="@Url.Content("~/User/Login")">
+                        <h3><b>Login</b></h3>
+                        <input type="text" id="login" name="login" placeholder="username" value="@ViewBag.Login" />
+                        <input type="password" id="password" name="password" placeholder="password" />
+                        <input style="background:black;color:white;cursor:progress;" id="btnlogin" name="btnlogin" type="submit" value="Login">
+                        <b>Forgot Password?</b> <br />
+                        <input type="email" id="email" name="email" placeholder="email" />
+                        <input style="background: black; color: white; cursor: progress;" name="btnResetPasswd" id="btnResetPasswd" type="submit" value="Reset Password">
+                        <br /><span style="color:red" @ViewBag.MSG</span>
+                    </form>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+

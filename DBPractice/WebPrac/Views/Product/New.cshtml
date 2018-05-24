@@ -1,0 +1,27 @@
+﻿@model PMS.Entities.ProductDTO
+
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_MyProductLayout.cshtml";
+}
+<hr />
+<h2>New Product</h2>
+<hr />
+<div class="col-md-offset-4">
+    <form action='@Url.Content("~/Product/Save")' method="post" enctype="multipart/form-data">
+        @if (Model.PictureName != "")
+        {
+            <img src='@Url.Content("~/UploadedFiles")/@Model.PictureName' style="width:100px;height:100px;" /> <br />
+        }
+        <input type="hidden" name="ProductID" value="@Model.ProductID" />
+        <input type="hidden" name="PictureName" value="@Model.PictureName" />
+        <label class="form-group">Name</label>
+        <input class="form-control" type="text" name="Name" value="@Model.Name" /> <br />
+        <label class="form-group">Price</label>
+        <input class="form-control" type="text" name="Price" value="@Model.Price" /> <br />
+        <label class="form-group">Image</label>
+        <input class="form-control" type="file" name="Image" />
+        <br />  
+        <input class="btn btn-block"  type="submit" value="Save" />
+    </form>
+</div>

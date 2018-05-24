@@ -1,0 +1,30 @@
+﻿@model PMS.Entities.UserDTO
+@{
+    ViewBag.Title = "User Profile";
+    Layout = "~/Views/Shared/_MyProductLayout.cshtml";
+}
+
+<hr />
+<h2 class="col-lg-offset-1">User Profile of @Model.Name</h2>
+<hr />
+
+<div class="col-lg-offset-5 col-lg-4">
+
+    @if (Model.PictureName != "")
+    {
+        <img src='@Url.Content("~/UploadedFiles")/@Model.PictureName' style="width:100px;height:100px;" /> <br />
+    }
+    <input type="hidden" name="UserID" value="@Model.UserID" />
+    <input type="hidden" name="PictureName" value="@Model.PictureName" />
+    <br />
+    <label class="form-group">Name</label>: 
+    <label class="form-group">@Model.Name</label>
+    <br />
+    <label class="form-group">Email</label>: 
+    <label class="form-group">@Model.Email</label>
+
+
+    <br />
+</div>
+
+

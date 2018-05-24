@@ -1,0 +1,7 @@
+C:\Users\Muhammad Shaheryar\Documents\Visual Studio 2013\Projects\assign07\ead_s18_a7_bcsf15m039\DBPractice\PMS.DAL\bin\Debug\PMS.DAL.dll
+C:\Users\Muhammad Shaheryar\Documents\Visual Studio 2013\Projects\assign07\ead_s18_a7_bcsf15m039\DBPractice\PMS.DAL\bin\Debug\PMS.DAL.pdb
+C:\Users\Muhammad Shaheryar\Documents\Visual Studio 2013\Projects\assign07\ead_s18_a7_bcsf15m039\DBPractice\PMS.DAL\bin\Debug\PMS.Entities.dll
+C:\Users\Muhammad Shaheryar\Documents\Visual Studio 2013\Projects\assign07\ead_s18_a7_bcsf15m039\DBPractice\PMS.DAL\bin\Debug\PMS.Entities.pdb
+C:\Users\Muhammad Shaheryar\Documents\Visual Studio 2013\Projects\assign07\ead_s18_a7_bcsf15m039\DBPractice\PMS.DAL\obj\Debug\PMS.DAL.csprojResolveAssemblyReference.cache
+C:\Users\Muhammad Shaheryar\Documents\Visual Studio 2013\Projects\assign07\ead_s18_a7_bcsf15m039\DBPractice\PMS.DAL\obj\Debug\PMS.DAL.dll
+C:\Users\Muhammad Shaheryar\Documents\Visual Studio 2013\Projects\assign07\ead_s18_a7_bcsf15m039\DBPractice\PMS.DAL\obj\Debug\PMS.DAL.pdb
